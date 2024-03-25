@@ -1,7 +1,7 @@
 export interface GetAllProductsResponse {
   id: string;
   name: string;
-  amout: number;
+  amount: number;
   description: string;
   price: string;
   category: {
