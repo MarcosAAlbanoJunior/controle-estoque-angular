@@ -5,6 +5,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { Router } from '@angular/router';
 import { GetAllProductsResponse } from 'src/app/models/interfaces/products/response/GetAllProductsResponse';
+import { EventAction } from 'src/app/models/interfaces/products/event/EventAction';
 
 @Component({
   selector: 'app-products-home',
@@ -57,6 +58,12 @@ export class ProductsHomeComponent implements OnInit, OnDestroy {
           this.router.navigate(['/dashboard']);
         },
       });
+  }
+
+  handleProductAction(event: EventAction): void{
+    if(event){
+      console.log('Dados do evento recebido', event);
+    }
   }
 
   ngOnDestroy(): void {
