@@ -12,7 +12,7 @@
   <div class="p-toolbar-group-center">
     <p-button
       label="Produtos"
-      icon="pi pi-shopping-cart"
+      icon="pi pi-cart-plus"
       routerLink="/products"
       styleClass="bg-indigo-800 p-button-secondary"
       routerLinkActive="exact_route"
@@ -29,16 +29,19 @@
     <p-button
       label="Efetuar Venda"
       icon="pi pi-credit-card"
-      routerLink="/products"
       styleClass="bg-indigo-800 p-button-secondary"
-      routerLinkActive="exact_route"
+      routerLink="/products"
       class="mr-2"
+      (onClick)="handleSaleProduct()"
     ></p-button>
   </div>
 
   <div class="p-toolbar-group-end">
-    <p-button label="Sair" icon="pi pi-sign-out" styleClass="p-button-danger"
-    (onClick)="handleLogout()">
-    </p-button>
+    <p-button
+      label="Sair"
+      icon="pi pi-sign-out"
+      styleClass="p-button-danger"
+      (onClick)="handleLogout()"
+    ></p-button>
   </div>
 </p-toolbar>
